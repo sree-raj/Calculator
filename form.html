@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <input id="num1">
+    <input id="num2">
+</form>
+
+<button onclick="printSum()" id="add">add</button>
+<button onclick="printmul()" id="mult">mul</button>
+<button onclick="printdiv()" id="divi">div</button>
+<button onclick="printsub()" id="subt">sub</button>
+
+Result:<p id="sum"></p>
+
+
+<script>
+    function printSum(){
+        inp1 = document.getElementById("num1");
+        inp2 = document.getElementById("num2");
+        var x = parseInt(inp1.value);
+        var y = parseInt(inp2.value);
+        document.getElementById("sum").innerHTML = x+y;
+    }
+</script>
+
+
+<script>
+    function printmul(){
+        inp1 = document.getElementById("num1");
+        inp2 = document.getElementById("num2");
+        var x = parseInt(inp1.value);
+        var y = parseInt(inp2.value);
+        document.getElementById("sum").innerHTML = x*y;
+    }
+</script>
+
+<script>
+    function printdiv(){
+        inp1 = document.getElementById("num1");
+        inp2 = document.getElementById("num2");
+        var x = parseInt(inp1.value);
+        var y = parseInt(inp2.value);
+        document.getElementById("sum").innerHTML = x/y;
+    }
+</script>
+
+
+<script>
+    function printsub(){
+        inp1 = document.getElementById("num1");
+        inp2 = document.getElementById("num2");
+        var x = parseInt(inp1.value);
+        var y = parseInt(inp2.value);
+        document.getElementById("sum").innerHTML = x-y;
+    }
+</script>
+
+</body>
+</html>

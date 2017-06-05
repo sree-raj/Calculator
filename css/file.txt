@@ -1,0 +1,21 @@
+0123456789
+
+prices = pageData.xpath('//div[@class="rc"]/text()')
+print(prices)
+
+import requests
+from lxml import html
+page = requests.get("https://www.google.co.in/?gfe_rd=cr&ei=PI0uWfr3N6_y8AePpraQAg&gws_rd=ssl#q=python")
+pageData = html.fromstring(page.content)
+prices = pageData.xpath('//h3[@class="r"]/text()')
+print(prices)
+
+
+import requests
+from lxml import html
+page = requests.get("https://www.google.co.in/search?q=donkey")
+pageData = html.fromstring(page.content)
+data = pageData.xpath('//h3//a[1]/text()')
+
+for i in data:
+    print i
